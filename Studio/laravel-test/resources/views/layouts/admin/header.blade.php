@@ -19,7 +19,7 @@
                                 Áo Cưới </span>
                         </a>
                     </li>
-                    <li class="nav-link"><a href="#"> <i class='bx bx-bell icon'></i> <span class="text nav-text">Bills
+                    <li class="nav-link"><a href="{{ route('AdminBillsAnhCuoi') }}"> <i class='bx bx-bell icon'></i> <span class="text nav-text">Bills
                                 Ảnh Cưới </span>
                         </a></li>
                 </ul>

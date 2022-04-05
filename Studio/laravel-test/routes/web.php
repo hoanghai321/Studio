@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminBillsAnhCuoi;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Admin\HomeAdminController;
@@ -62,7 +63,14 @@ Route::get('/deleteinfousers/{id}', [HomeAdminController::class ,'delete'])->nam
 //admin BillsAoCuoi
 Route::get('/AdminBillsAoCuoi', [AdminBillsAoCuoi::class, 'index'])->name('AdminBillsAoCuoi');
 Route::get('/AdminBillsAoCuoi/{id}', [AdminBillsAoCuoi::class, 'delete'])->name('DeleteBillsAoCuoi');
-Route::get('/AdminBillsAoCuoiDetail{id}', [AdminBillsAoCuoi::class, 'showdetail'])->name('AdminBillsAoCuoiDetail');
-Route::get('/AdminBillsAoCuoiDetail/{id}', [AdminBillsAoCuoi::class, 'deletedetail'])->name('DeleteBillsAoCuoiDetail');
+Route::get('/AdminBillsAoCuoiDetail/{id}', [AdminBillsAoCuoi::class, 'showdetail'])->name('AdminBillsAoCuoiDetail');
+Route::get('/AdminBillsAoCuoiDetailDelete/{id}', [AdminBillsAoCuoi::class, 'deletedetail'])->name('DeleteBillsAoCuoiDetail');
+
+//admin BillsAnhCuoi
+Route::get('/AdminBillsAnhCuoi', [AdminBillsAnhCuoi::class, 'index'])->name('AdminBillsAnhCuoi');
+Route::get('/AdminBillsAnhCuoi/{id}', [AdminBillsAnhCuoi::class, 'delete'])->name('DeleteBillsAnhCuoi');
+Route::get('/AdminBillsAnhCuoiDetail/{id}', [AdminBillsAnhCuoi::class, 'showdetail'])->name('AdminBillsAnhCuoiDetail');
+Route::get('/AdminBillsAnhCuoiDetailDelete/{id}', [AdminBillsAnhCuoi::class, 'deletedetail'])->name('DeleteBillsAnhCuoiDetail');
+
 
 
