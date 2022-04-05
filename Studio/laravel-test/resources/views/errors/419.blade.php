@@ -2,4 +2,4 @@
 
 @section('title', __('Failed'))
 @section('code', 'Failed')
-@section('message', __('THANH TOÁN THẤT BẠI'))
+@section('message', __('THẤT BẠI'))

@@ -14,7 +14,7 @@
                     <li class="nav-link"><a href="{{ route('Admin') }}"> <i class='bx bx-home-alt icon'></i> <span class="text nav-text">QLTK
                             </span>
                         </a></li>
-                    <li class="nav-link"><a href="#">
+                    <li class="nav-link"><a href="{{ route('AdminBillsAoCuoi') }}">
                             <i class='bx bx-bell icon'></i> <span class="text nav-text">Bills
                                 Áo Cưới </span>
                         </a>

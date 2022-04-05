@@ -36,7 +36,9 @@ class HomeAdminController extends Controller
         }
     }
     //xử lý thêm mới tài khoản 
-    public function insert(Request $request){
+    public function insert(Request $request)
+    {
+        $email = Auth::user()->email;
         $role = Auth::user()->role;
         if (!Auth::user() || $role == '2') {
             $add = DB::table('users')->insert([
@@ -58,7 +60,7 @@ class HomeAdminController extends Controller
     public function edit($id)
     {
         $users_id = DB::table('users')->where('id', $id)->select('name', 'email', 'phone', 'address', 'role')->get();
-        
+
         $role = Auth::user()->role;
         if (!Auth::user() || $role == '2') {
             return view('admin.EditInfoUsers', compact('users_id'));

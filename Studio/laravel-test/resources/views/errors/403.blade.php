@@ -2,4 +2,4 @@
 
 @section('title', __('Succsess'))
 @section('code', 'SUCCSESS')
-@section('message', __($exception->getMessage() ?: 'Thanh toán thành công'))
+@section('message', __($exception->getMessage() ?: 'Thành công'))

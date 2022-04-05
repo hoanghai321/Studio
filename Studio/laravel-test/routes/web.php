@@ -13,6 +13,7 @@ use App\Http\Controllers\User\CartAnhCuoiController;
 use App\Http\Controllers\User\CartController;
 use App\Http\Controllers\User\HistoryCart;
 use App\Http\Controllers\User\Test;
+use App\Http\Controllers\Admin\AdminBillsAoCuoi;
 
 //Default
 Route::get('/', function() {return view('user.Index');})->name('home');
@@ -50,7 +51,7 @@ Route::get('/HistoryCart', [HistoryCart::class, 'index'])->name('HistoryCart')->
 Route::get('/HistoryCartAoCuoi/{id}', [HistoryCart::class, 'showbilldetail'])->name('HistoryCartAoCuoi');
 Route::get('/HistoryCartAnhCuoi/{id}', [HistoryCart::class, 'showbilldetail2'])->name('HistoryCartAnhCuoi');
 
-//admin
+//admin QLTK
 Route::get('/admin', [HomeAdminController::class ,'index'])->name('Admin')->middleware('auth');
 Route::get('/addusers', [HomeAdminController::class ,'add'])->name('AddUsers')->middleware('auth');
 Route::post('/addusers', [HomeAdminController::class ,'insert'])->name('AddUsers')->middleware('auth');
@@ -58,5 +59,10 @@ Route::get('/editinfousers/{id}', [HomeAdminController::class ,'edit'])->name('E
 Route::post('/editinfousers/{id}', [HomeAdminController::class ,'update'])->name('EditInfoUsers')->middleware('auth');
 Route::get('/deleteinfousers/{id}', [HomeAdminController::class ,'delete'])->name('DeleteInfoUsers')->middleware('auth');
 
+//admin BillsAoCuoi
+Route::get('/AdminBillsAoCuoi', [AdminBillsAoCuoi::class, 'index'])->name('AdminBillsAoCuoi');
+Route::get('/AdminBillsAoCuoi/{id}', [AdminBillsAoCuoi::class, 'delete'])->name('DeleteBillsAoCuoi');
+Route::get('/AdminBillsAoCuoiDetail{id}', [AdminBillsAoCuoi::class, 'showdetail'])->name('AdminBillsAoCuoiDetail');
+Route::get('/AdminBillsAoCuoiDetail/{id}', [AdminBillsAoCuoi::class, 'deletedetail'])->name('DeleteBillsAoCuoiDetail');
 
 
