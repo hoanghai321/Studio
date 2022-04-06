@@ -15,25 +15,25 @@
                                     <div class="checkout-country-code clearfix">
                                         <div class="form-group">
                                             <label for="">Họ và tên:</label>
-                                            <input name="name" type="text" class="form-control" />
+                                            <input name="name" type="text" class="form-control" required/>
                                         </div>
                                         <div class="form-group">
                                             <label for="">Email:</label>
-                                            <input name="email" type="email" class="form-control" />
+                                            <input name="email" type="email" class="form-control" required/>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                             <label for="">Mật khẩu:</label>
-                                            <input id="password" name="password" type="password" class="form-control" />
+                                            <input id="password" name="password" type="password" class="form-control" required/>
                                         </div>
                                     <div class="checkout-country-code clearfix">
                                         <div class="form-group">
                                             <label for="">SĐT:</label>
-                                            <input name="phone" type="tel" class="form-control" />
+                                            <input name="phone" type="tel" class="form-control" required/>
                                         </div>
                                         <div class="form-group">
                                             <label for="">Địa chỉ:</label>
-                                            <input name="address" class="form-control" />
+                                            <input name="address" class="form-control" required/>
                                         </div>
                                     </div>
                                     <div class="form-group">

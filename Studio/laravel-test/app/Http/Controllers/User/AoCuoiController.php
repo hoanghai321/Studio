@@ -15,7 +15,7 @@ class AoCuoiController extends Controller
     public function index()
     {
         $aocuoi['aocuoi'] = DB::table('aocuois')->paginate(9); // phân trang
-        return view('user.aocuoi', $aocuoi);;
+        return view('user.aocuoi', $aocuoi);
     }
 
     //Hàm hiển thị chi tiết áo cưới theo id

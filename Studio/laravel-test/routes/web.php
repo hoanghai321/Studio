@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AddProductController;
 use App\Http\Controllers\Admin\AdminBillsAnhCuoi;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -56,7 +57,7 @@ Route::get('/HistoryCartAnhCuoi/{id}', [HistoryCart::class, 'showbilldetail2'])-
 Route::get('/admin', [HomeAdminController::class ,'index'])->name('Admin')->middleware('auth');
 Route::get('/addusers', [HomeAdminController::class ,'add'])->name('AddUsers')->middleware('auth');
 Route::post('/addusers', [HomeAdminController::class ,'insert'])->name('AddUsers')->middleware('auth');
-Route::get('/editinfousers/{    id}', [HomeAdminController::class ,'edit'])->name('EditInfoUsers')->middleware('auth');
+Route::get('/editinfousers/{id}', [HomeAdminController::class ,'edit'])->name('EditInfoUsers')->middleware('auth');
 Route::post('/editinfousers/{id}', [HomeAdminController::class ,'update'])->name('EditInfoUsers')->middleware('auth');
 Route::get('/deleteinfousers/{id}', [HomeAdminController::class ,'delete'])->name('DeleteInfoUsers')->middleware('auth');
 
@@ -71,6 +72,9 @@ Route::get('/AdminBillsAnhCuoi', [AdminBillsAnhCuoi::class, 'index'])->name('Adm
 Route::get('/AdminBillsAnhCuoi/{id}', [AdminBillsAnhCuoi::class, 'delete'])->name('DeleteBillsAnhCuoi');
 Route::get('/AdminBillsAnhCuoiDetail/{id}', [AdminBillsAnhCuoi::class, 'showdetail'])->name('AdminBillsAnhCuoiDetail');
 Route::get('/AdminBillsAnhCuoiDetailDelete/{id}', [AdminBillsAnhCuoi::class, 'deletedetail'])->name('DeleteBillsAnhCuoiDetail');
+
+//admin add product
+Route::get('/Product', [AddProductController::class, 'index'])->name('ProductAdmin');
 
 
 
