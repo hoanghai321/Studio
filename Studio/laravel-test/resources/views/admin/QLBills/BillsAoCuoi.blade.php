@@ -1,21 +1,22 @@
 @extends('layouts.appAdmin')
 @section('content')
 
-<body id="body">
+<body>
     <div class="page-wrapper">
         <div class="cart shopping">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
+                    <div class="col-md-11 col-md-offset-2">
                         <div class="block">
                             <div class="product-list">
-                                <h3>Áo cưới</h3>
+                                <h3 style="text-align: center; margin-bottom: 50px;"><strong />Quản lý thông tin Bills áo cưới</h3>
                                 <form method="GET">
                                     <table class="table">
                                         <thead>
                                             <tr>
                                                 <th>Số bills</th>
                                                 <th>Họ tên</th>
+                                                <th>Email</th>
                                                 <th>Ghi chú</th>
                                                 <th>Thời gian</th>
                                                 <th></th>
@@ -32,6 +33,7 @@
                                                     </div>
                                                 </td>
                                                 <td>{{ $a->name }}</td>
+                                                <td>{{ $a->email }}</td>
                                                 <td>{{$a->note}}</td>
                                                 <td>{{$a->created_at}}</td>
                                                 <td>

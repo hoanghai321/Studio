@@ -56,7 +56,7 @@ Route::get('/HistoryCartAnhCuoi/{id}', [HistoryCart::class, 'showbilldetail2'])-
 Route::get('/admin', [HomeAdminController::class ,'index'])->name('Admin')->middleware('auth');
 Route::get('/addusers', [HomeAdminController::class ,'add'])->name('AddUsers')->middleware('auth');
 Route::post('/addusers', [HomeAdminController::class ,'insert'])->name('AddUsers')->middleware('auth');
-Route::get('/editinfousers/{id}', [HomeAdminController::class ,'edit'])->name('EditInfoUsers')->middleware('auth');
+Route::get('/editinfousers/{    id}', [HomeAdminController::class ,'edit'])->name('EditInfoUsers')->middleware('auth');
 Route::post('/editinfousers/{id}', [HomeAdminController::class ,'update'])->name('EditInfoUsers')->middleware('auth');
 Route::get('/deleteinfousers/{id}', [HomeAdminController::class ,'delete'])->name('DeleteInfoUsers')->middleware('auth');
 

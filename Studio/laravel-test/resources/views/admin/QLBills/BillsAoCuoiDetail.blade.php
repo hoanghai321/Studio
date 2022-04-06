@@ -6,10 +6,10 @@
         <div class="cart shopping">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
+                    <div class="col-md-11 col-md-offset-2">
                         <div class="block">
                             <div class="product-list">
-                                <h3>Áo cưới</h3>
+                                <h3>Quản lý thông tin Bills Áo cưới</h3>
                                 <form method="GET">
                                     <table class="table">
                                         <thead>

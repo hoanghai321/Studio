@@ -82,6 +82,7 @@
                                                 <th>User Name</th>
                                                 <th>Ghi chú</th>
                                                 <th>Thời gian</th>
+                                                <th>Xem chi tiết</th>
                                             </tr>
                                         </thead>
                                         <tbody>
