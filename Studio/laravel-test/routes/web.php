@@ -75,6 +75,9 @@ Route::get('/AdminBillsAnhCuoiDetailDelete/{id}', [AdminBillsAnhCuoi::class, 'de
 
 //admin add product
 Route::get('/Product', [AddProductController::class, 'index'])->name('ProductAdmin');
+Route::get('/AddAoCuoi', [AddProductController::class, 'AddAoCuoi'])->name('AddAoCuoi');
+Route::get('/AddAnhCuoi', [AddProductController::class, 'AddAnhCuoi'])->name('AddAnhCuoi');
+
 
 
 
