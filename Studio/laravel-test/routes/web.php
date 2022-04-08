@@ -17,6 +17,7 @@ use App\Http\Controllers\User\HistoryCart;
 use App\Http\Controllers\User\Test;
 use App\Http\Controllers\Admin\AdminBillsAoCuoi;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\User\UserProfile\UserProfileController;
 
 //Default
 Route::get('/', function() {return view('user.Index');})->name('home');
@@ -78,9 +79,14 @@ Route::get('/AdminBillsAnhCuoiDetailDelete/{id}', [AdminBillsAnhCuoi::class, 'de
 Route::get('/Product', [AddProductController::class, 'index'])->name('ProductAdmin')->middleware('auth');;
 Route::get('/AddAoCuoi', [AddProductController::class, 'AddAoCuoi'])->name('AddAoCuoi')->middleware('auth');;
 Route::post('/AddAoCuoi', [AddProductController::class, 'CreateAoCuoi'])->name('AddAoCuoi')->middleware('auth');;
-
+//admin add anh cuoi
 Route::get('/AddAnhCuoi', [AddProductController::class, 'AddAnhCuoi'])->name('AddAnhCuoi')->middleware('auth');;
 Route::post('/AddAnhCuoi', [AddProductController::class, 'CreateAnhCuoi'])->name('AddAnhCuoi')->middleware('auth');;
+
+//Profile user
+Route::get('/UserProfile', [UserProfileController::class, 'index'])->name('UserProfile');
+Route::post('/UserProfile', [UserProfileController::class, 'update'])->name('UserProfile');
+Route::post('/UserProfile2', [UserProfileController::class, 'update2'])->name('UserProfile2');
 
 
 

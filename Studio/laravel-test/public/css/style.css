@@ -2,9 +2,9 @@
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500");
 body {
-    background-color: #FFFAF0;
+    background: whitesmoke;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
-    font-family: "Poppins", sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -300,12 +300,13 @@ input[type="tel"]:focus {
 }
 
 .section {
-    background-color: #FFFAF0;
+    background: whitesmoke;
+    font-family: 'Open Sans', sans-serif;
     padding: 80px 0;
 }
 
 #hoanghai {
-    background-color: ivory;
+    background-color: whitesmoke;
 }
 
 .title {

@@ -10,7 +10,7 @@
                         <div class="block">
                             <div class="product-list">
                                 <h2 style="text-align: center; margin-bottom: 50px;"><strong />THÊM MỚI ÁO CƯỚI</h2>
-                                <form action="" method="POST" class="checkout-form" enctype="multipart/form-data">
+                                <form action="{{route('UserProfile')}}" method="post" class="checkout-form" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group">
                                         <label for="">Tên ảnh</label>
