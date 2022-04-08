@@ -2,8 +2,38 @@
 
 <nav class="sidebar">
     <header>
-        <div class="image-text">
-            <i class="fa-solid fa-user-secret icon"></i><span class="text nav-text">{{ Auth::user()->name }}</span>
+        <div class="action">
+            @guest
+            @if (Route::has('login'))
+            <div class="profile" onclick="menuToggle();">
+                <img src="/images/AccountImage/AvatarUser.png" alt="">
+            </div>
+            @endif
+            @else
+            <div class="profile" onclick="menuToggle();">
+                <img src="{{url('images/AccountImage')}}/{{Auth::user()->image}}" alt="Img">
+            </div>
+            @endguest
+
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            {{ Auth::user()->name }}
+                        </a>
+                    </li>
+                    <li><a href="{{route('UserProfile', ['id' => Auth::user()->id ])}}">Thông tin</a></li>
+                    <li aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+														document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
 

@@ -78,21 +78,14 @@
 									</form>
 								</li>
 						</div>
+					</div>
 				</ul>
 				@endguest
 			</div>
-
-			</ul>
 		</div>
 	</div>
 	</div>
 </section2>
-<script>
-	function menuToggle() {
-		const toggleMenu = document.querySelector('.menu');
-		toggleMenu.classList.toggle('active')
-	}
-</script>
 <!-- End Top Header Bar -->
 
 <!-- Main Menu Section -->

@@ -39,6 +39,9 @@ class UserProfileController extends Controller
     public function update2(Request $request)
     {
         $id = Auth::user()->id;
+
+        
+
         $add = DB::table('users')->where('id', $id)->update([
             'name' => $request->name,
             'phone' => $request->phone,
