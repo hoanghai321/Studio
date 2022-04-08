@@ -10,7 +10,7 @@
                         <div class="block">
                             <div class="product-list">
                                 <h2 style="text-align: center; margin-bottom: 50px;"><strong />THÊM MỚI ÁO CƯỚI</h2>
-                                <form action="" method="post" class="checkout-form" role="form" enctype="multipart/form-data">
+                                <form action="" method="POST" class="checkout-form" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group">
                                         <label for="">Tên ảnh</label>
@@ -23,29 +23,30 @@
                                     <div class="form-group">
                                         <label for="">Upload ảnh chính:</label>
                                         <input name="upload0" type="file" class="form-control" required />
-                                        @error('upload')
+                                        @error('upload0')
                                         <small class="text-danger help-block">{{ $message }}</small>
                                         @enderror
                                     </div>
+
                                     <h3>Thêm ảnh phụ cho áo cưới</h3>
                                     <div class="form-group">
                                         <label for="">Ảnh 1:</label>
                                         <input name="upload1" type="file" class="form-control" required />
-                                        @error('upload')
+                                        @error('upload1')
                                         <small class="text-danger help-block">{{ $message }}</small>
                                         @enderror
                                     </div>
                                     <div class="form-group">
                                         <label for="">Ảnh 2:</label>
                                         <input name="upload2" type="file" class="form-control" required />
-                                        @error('upload')
+                                        @error('upload2')
                                         <small class="text-danger help-block">{{ $message }}</small>
                                         @enderror
                                     </div>
                                     <div class="form-group">
                                         <label for="">Ảnh 3:</label>
                                         <input name="upload3" type="file" class="form-control" required />
-                                        @error('upload')
+                                        @error('upload3')
                                         <small class="text-danger help-block">{{ $message }}</small>
                                         @enderror
                                     </div>

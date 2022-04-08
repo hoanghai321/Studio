@@ -62,25 +62,25 @@ Route::post('/editinfousers/{id}', [HomeAdminController::class ,'update'])->name
 Route::get('/deleteinfousers/{id}', [HomeAdminController::class ,'delete'])->name('DeleteInfoUsers')->middleware('auth');
 
 //admin BillsAoCuoi
-Route::get('/AdminBillsAoCuoi', [AdminBillsAoCuoi::class, 'index'])->name('AdminBillsAoCuoi');
-Route::get('/AdminBillsAoCuoi/{id}', [AdminBillsAoCuoi::class, 'delete'])->name('DeleteBillsAoCuoi');
-Route::get('/AdminBillsAoCuoiDetail/{id}', [AdminBillsAoCuoi::class, 'showdetail'])->name('AdminBillsAoCuoiDetail');
-Route::get('/AdminBillsAoCuoiDetailDelete/{id}', [AdminBillsAoCuoi::class, 'deletedetail'])->name('DeleteBillsAoCuoiDetail');
+Route::get('/AdminBillsAoCuoi', [AdminBillsAoCuoi::class, 'index'])->name('AdminBillsAoCuoi')->middleware('auth');;
+Route::get('/AdminBillsAoCuoi/{id}', [AdminBillsAoCuoi::class, 'delete'])->name('DeleteBillsAoCuoi')->middleware('auth');;
+Route::get('/AdminBillsAoCuoiDetail/{id}', [AdminBillsAoCuoi::class, 'showdetail'])->name('AdminBillsAoCuoiDetail')->middleware('auth');;
+Route::get('/AdminBillsAoCuoiDetailDelete/{id}', [AdminBillsAoCuoi::class, 'deletedetail'])->name('DeleteBillsAoCuoiDetail')->middleware('auth');;
 
 //admin BillsAnhCuoi
-Route::get('/AdminBillsAnhCuoi', [AdminBillsAnhCuoi::class, 'index'])->name('AdminBillsAnhCuoi');
-Route::get('/AdminBillsAnhCuoi/{id}', [AdminBillsAnhCuoi::class, 'delete'])->name('DeleteBillsAnhCuoi');
-Route::get('/AdminBillsAnhCuoiDetail/{id}', [AdminBillsAnhCuoi::class, 'showdetail'])->name('AdminBillsAnhCuoiDetail');
-Route::get('/AdminBillsAnhCuoiDetailDelete/{id}', [AdminBillsAnhCuoi::class, 'deletedetail'])->name('DeleteBillsAnhCuoiDetail');
+Route::get('/AdminBillsAnhCuoi', [AdminBillsAnhCuoi::class, 'index'])->name('AdminBillsAnhCuoi')->middleware('auth');;
+Route::get('/AdminBillsAnhCuoi/{id}', [AdminBillsAnhCuoi::class, 'delete'])->name('DeleteBillsAnhCuoi')->middleware('auth');;
+Route::get('/AdminBillsAnhCuoiDetail/{id}', [AdminBillsAnhCuoi::class, 'showdetail'])->name('AdminBillsAnhCuoiDetail')->middleware('auth');;
+Route::get('/AdminBillsAnhCuoiDetailDelete/{id}', [AdminBillsAnhCuoi::class, 'deletedetail'])->name('DeleteBillsAnhCuoiDetail')->middleware('auth');;
 
 //admin add product
 //admin add ao cuoi
-Route::get('/Product', [AddProductController::class, 'index'])->name('ProductAdmin');
-Route::get('/AddAoCuoi', [AddProductController::class, 'AddAoCuoi'])->name('AddAoCuoi');
-Route::post('/AddAoCuoi', [AddProductController::class, 'CreateAoCuoi'])->name('AddAoCuoi');
+Route::get('/Product', [AddProductController::class, 'index'])->name('ProductAdmin')->middleware('auth');;
+Route::get('/AddAoCuoi', [AddProductController::class, 'AddAoCuoi'])->name('AddAoCuoi')->middleware('auth');;
+Route::post('/AddAoCuoi', [AddProductController::class, 'CreateAoCuoi'])->name('AddAoCuoi')->middleware('auth');;
 
-
-Route::get('/AddAnhCuoi', [AddProductController::class, 'AddAnhCuoi'])->name('AddAnhCuoi');
+Route::get('/AddAnhCuoi', [AddProductController::class, 'AddAnhCuoi'])->name('AddAnhCuoi')->middleware('auth');;
+Route::post('/AddAnhCuoi', [AddProductController::class, 'CreateAnhCuoi'])->name('AddAnhCuoi')->middleware('auth');;
 
 
 
