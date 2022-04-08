@@ -16,11 +16,11 @@ use App\Http\Controllers\User\CartController;
 use App\Http\Controllers\User\HistoryCart;
 use App\Http\Controllers\User\Test;
 use App\Http\Controllers\Admin\AdminBillsAoCuoi;
+use App\Http\Controllers\Auth\LoginController;
 
 //Default
 Route::get('/', function() {return view('user.Index');})->name('home');
 Auth::routes();
-
 //user 
 Route::get('/', [HomeUserController::class, 'index'])->name('User');
 Route::resource('/home', HomeController::class)->middleware('role:2');
