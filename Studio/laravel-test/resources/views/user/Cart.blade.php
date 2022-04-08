@@ -46,7 +46,7 @@
                                             <tr>
                                                 <td>
                                                     <div class="product-info">
-                                                        <img width="80px" src="{{ $a['image']}}">
+                                                        <img width="80px" src="{{ url('images/AoCuoi') }}/{{ $a['image']}}">
                                                     </div>
                                                 </td>
                                                 <td>
@@ -113,7 +113,7 @@
                                             <tr>
                                                 <td>
                                                     <div class="product-info">
-                                                        <img width="80px" src="{{ $a['image']}}">
+                                                        <img width="80px" src="{{ url('images/AnhCuoi') }}/{{ $a['image']}}">
                                                     </div>
                                                 </td>
                                                 <td>

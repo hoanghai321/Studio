@@ -31,7 +31,7 @@
             padding: 12px 48px;
             text-align: center;
             color: white;
-            border: solid 5px tomato;
+            border: solid 5px white;
             z-index: 1;
         }
 
@@ -46,7 +46,7 @@
                 <div class="col-md-12 col-md-offset-2">
                     <div style="margin-right: 300px;" class="col-md-3">
                         <div class="thumbnail">
-                            <img src="/images/1.jpg" alt="">
+                        <a href="{{ route('AddAoCuoi') }}"><img src="/images/1.jpg" alt=""></a>
                             <div class="overlay"></div>
                         </div>
                         <div class="button"><a href="{{ route('AddAoCuoi') }}"><i class="fa-solid fa-square-plus icon"></i><strong/>Thêm áo cưới </a></div>
@@ -54,7 +54,7 @@
 
                     <div class="col-md-3">
                         <div class="thumbnail">
-                            <img src="/images/AnhCuoi/5.jpg" alt="">
+                        <a href="{{ route('AddAnhCuoi') }}"><img src="/images/AnhCuoi/5.jpg" /></a>
                             <div class="overlay"></div>
                         </div>
                         <div class="button"><a href="{{ route('AddAnhCuoi') }}"><i class="fa-solid fa-square-plus icon"></i><strong/>Thêm ảnh cưới </a></div>

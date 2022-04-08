@@ -15,8 +15,6 @@
 					<h3 style="text-align: center;"><strong />Áo Cưới</h3>
 					<div class="category-box category-box-2">
 						<a href="/aocuoi"> <img src="/images/2.jpg">
-							<div class="content">
-							</div>
 						</a>
 					</div>
 				</div>
@@ -24,8 +22,6 @@
 					<h3 style="text-align: center;"><strong />Ảnh Cưới</h3>
 					<div class="category-box category-box-2">
 						<a href="/anhcuoi"> <img src="/images/AnhCuoi/1.jpg" />
-							<div class="content">
-							</div>
 						</a>
 					</div>
 				</div>
@@ -33,8 +29,6 @@
 					<h3 style="text-align: center;"><strong />Mẫu váy phụ dâu</h3>
 					<div class="category-box category-box-2">
 						<a href="#"> <img src="/images/AnhCuoi/4.jpg" />
-							<div class="content">
-							</div>
 						</a>
 					</div>
 				</div>

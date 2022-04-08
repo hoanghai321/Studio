@@ -16,7 +16,7 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="modal-image">
-                            <img class="img-responsive" src="{{$a->image}}" alt="product-img" />
+                            <img class="img-responsive" src="{{ url('images/AoCuoi')}}/{{$a->image}}" alt="product-img" />
                         </div>
                     </div>
                     <div class="col-md-5 col-sm-6 col-xs-12" style="margin-bottom: 40px">
@@ -29,9 +29,9 @@
                     <div data-slider-id="1" class="owl-thumbs">
                         <div class="col-md-6">
                             <ul>
-                                <li><img src="{{$a->image1}}" /></li>
-                                <li><img src="{{$a->image2}}" /></li>
-                                <li><img src="{{$a->image3}}" /></li>
+                                <li><img src="{{ url('images/AoCuoi')}}/{{$a->image1}}" /></li>
+                                <li><img src="{{ url('images/AlbumAoCuoi')}}/{{$a->image2}}" /></li>
+                                <li><img src="{{ url('images/AlbumAoCuoi')}}/{{$a->image3}}" /></li>
                             </ul>
                         </div>
                     </div>

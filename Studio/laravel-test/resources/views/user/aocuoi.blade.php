@@ -7,6 +7,9 @@
             <div class="row">
                 <div class="title text-center">
                     <h1><strong />Áo cưới AVIATO</h1>
+                    <div style="text-align: center">
+                    {{ $aocuoi->links() }}
+                </div>
                 </div>
             </div>
             <div class="row">
@@ -14,7 +17,7 @@
                 <div class="col-md-4">
                     <div class="product-item">
                         <div class="product-thumb">
-                            <span class="bage">Hot</span> <img class="img-responsive" src="{{ $a->image }}" alt="product-img" />
+                            <span class="bage">Hot</span> <img class="img-responsive" src="{{ url('images/AoCuoi')}}/{{ $a->image }}" alt="product-img" />
                             <div class="preview-meta">
                                 <ul>
                                     <li data-toggle="modal" data-target="#product-modal"><a href="{{ route('aocuoiById', ['id' => $a->id]) }}"><i class="tf-ion-ios-search-strong"></i></a></li>
@@ -36,9 +39,9 @@
                     </div>
                 </div>
                 @endforeach
-                <div style="text-align: center;">
-                    {{ $aocuoi->links() }}
-                </div>
+            </div>
+            <div style="text-align: center">
+                {{ $aocuoi->links() }}
             </div>
         </div>
     </section>

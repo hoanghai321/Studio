@@ -14,7 +14,7 @@
                 <div class="col-md-4">
                     <div class="product-item">
                         <div class="product-thumb">
-                            <span class="bage">Hot</span> <img class="img-responsive" src="{{ $a->image }}" alt="product-img" />
+                            <span class="bage">Hot</span> <img class="img-responsive" src="{{ url('images/AnhCuoi')}}/{{ $a->image }}" alt="product-img" />
                             <div class="preview-meta">
                                 <ul>
                                     <li data-toggle="modal" data-target="#product-modal"><a href="{{ route('anhcuoiById', ['id'=>$a->id]) }}"><i class="tf-ion-ios-search-strong"></i></a></li>

@@ -28,7 +28,7 @@
                                                 <td>{{ $a->billsaocuoi_id }}</td>
                                                 <td>
                                                     <div class="product-info">
-                                                        <img width="100px" src="{{ $a->image }}" />
+                                                        <img width="100px" src="{{url('images/AoCuoi')}}/{{ $a->image }}" />
                                                     </div>
                                                 </td>
                                                 <td>{{$a->name}}</td>
