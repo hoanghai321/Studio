@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.3
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 05, 2022 lúc 08:01 PM
--- Phiên bản máy phục vụ: 10.4.22-MariaDB
--- Phiên bản PHP: 8.1.2
+-- Thời gian đã tạo: Th4 08, 2022 lúc 08:49 PM
+-- Phiên bản máy phục vụ: 10.4.24-MariaDB
+-- Phiên bản PHP: 8.1.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Cơ sở dữ liệu: `studio1`
 --
+CREATE DATABASE IF NOT EXISTS `studio1` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `studio1`;
 
 -- --------------------------------------------------------
 
@@ -41,12 +43,12 @@ CREATE TABLE `anhcuois` (
 --
 
 INSERT INTO `anhcuois` (`id`, `name`, `price`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'ALBUM ẢNH CƯỚI TẠI PHIM TRƯỜNG L\'AMOUR', 789, '/images/AnhCuoi/1.jpg', NULL, NULL),
-(2, 'ALBUM ẢNH CƯỚI TẠI PHIM TRƯỜNG ALIBABA', 690, '/images/AnhCuoi/2.jpg', NULL, NULL),
-(3, 'ALBUM ẢNH CƯỚI TẠI PHIM TRƯỜNG PARIS', 590, '/images/AnhCuoi/3.jpg', NULL, NULL),
-(4, 'ALBUM ẢNH CƯỚI  TẠI PHIM TRƯỜNG ENDEE', 670, '/images/AnhCuoi/4.jpg', NULL, NULL),
-(5, 'ALBUM ẢNH CƯỚI CHỤP TRONG NỘI THÀNH SÀI GÒN', 740, '/images/AnhCuoi/5.jpg', NULL, NULL),
-(6, 'ALBUM ẢNH CƯỚI CHỤP TRONG PHIM TRƯỜNG CABIN', 760, '/images/AnhCuoi/6.jpg', NULL, NULL);
+(1, 'ALBUM ẢNH CƯỚI TẠI PHIM TRƯỜNG L\'AMOUR', 789, '1.jpg', NULL, NULL),
+(2, 'ALBUM ẢNH CƯỚI TẠI PHIM TRƯỜNG ALIBABA', 690, '2.jpg', NULL, NULL),
+(3, 'ALBUM ẢNH CƯỚI TẠI PHIM TRƯỜNG PARIS', 590, '3.jpg', NULL, NULL),
+(4, 'ALBUM ẢNH CƯỚI  TẠI PHIM TRƯỜNG ENDEE', 670, '4.jpg', NULL, NULL),
+(5, 'ALBUM ẢNH CƯỚI CHỤP TRONG NỘI THÀNH SÀI GÒN', 740, '5.jpg', NULL, NULL),
+(6, 'ALBUM ẢNH CƯỚI CHỤP TRONG PHIM TRƯỜNG CABIN', 760, '6.jpg', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -68,21 +70,21 @@ CREATE TABLE `aocuois` (
 --
 
 INSERT INTO `aocuois` (`id`, `name`, `price`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'SELENA - VLITX-479 LIMITED BALL GOWN IVORY ROYAL CATHEDRAL', 1100, '/images/AoCuoi/1.jpg', NULL, NULL),
-(2, 'HERA - VLTX-480 LUXURY BALL GOWN LONG SLEEVE 3D LACE CATHEDRAL ', 1300, '/images/AoCuoi/2.jpg', NULL, NULL),
-(3, 'FREYJA - VLTX-481 BALL GOWN ROYAL CATHEDRAL TRAIN LONG SLEEVE HIGH ', 1200, '/images/AoCuoi/3.jpg', NULL, NULL),
-(4, 'ATHENA-VLTX-482 BALL GOWN FLOOR LENGTH WEDDING DRESS', 1529, '/images/AoCuoi/4.jpg', NULL, NULL),
-(5, 'VMDC - 395 MERMAID IVORY PRINCESS FLOOR LENGTH V NECK SATIN ', 1430, '/images/AoCuoi/5.jpg', NULL, NULL),
-(6, 'VLTX-394 LUXURY BALL GOWN HIGH NECK LONG 3D LACE WEDDING DRESS', 1230, '/images/AoCuoi/6.jpg', NULL, NULL),
-(7, 'VMDC-408 MERMAID IVORY MINIMALIST FLOOR LENGTH 3D FLORAL ', 1390, '/images/AoCuoi/7.jpg', NULL, NULL),
-(8, 'VLTX - 406 LUXURY BALL GOWN CATHEDRAL TRAIN STRAPLESS', 1690, '/images/AoCuoi/8.jpg', NULL, NULL),
-(9, 'VMDC-408 MINIMALIST FLOOR LENGTH WITH LONG CAP 2D FLORAL ', 1403, '/images/AoCuoi/9.jpg', NULL, NULL),
-(10, 'SELENA - VLITX-479 LIMITED BALL GOWN IVORY ROYAL CATHEDRAL', 1290, '/images/AlbumAoCuoi/0.jpg', NULL, NULL),
-(11, 'HERA - VLTX-480 LUXURY BALL GOWN LONG SLEEVE 3D LACE CATHEDRAL ', 1390, '/images/AlbumAoCuoi/0-1.jpg', NULL, NULL),
-(12, 'FREYJA - VLTX-481 BALL GOWN ROYAL CATHEDRAL TRAIN LONG SLEEVE HIGH ', 1190, '/images/AlbumAoCuoi/0-2.jpg', NULL, NULL),
-(13, 'ATHENA-VLTX-482 BALL GOWN FLOOR LENGTH WEDDING DRESS', 1490, '/images/AlbumAoCuoi/6-1.jpg', NULL, NULL),
-(14, 'VMDC - 395 MERMAID IVORY PRINCESS FLOOR LENGTH V NECK SATIN ', 1250, '/images/AlbumAoCuoi/6-2.jpg', NULL, NULL),
-(15, 'VLTX-394 LUXURY BALL GOWN HIGH NECK LONG 3D LACE WEDDING DRESS', 1550, '/images/AlbumAoCuoi/9-2.jpg', NULL, NULL);
+(1, 'SELENA - VLITX-479 LIMITED BALL GOWN IVORY ROYAL CATHEDRAL', 1100, '1.jpg', NULL, NULL),
+(2, 'HERA - VLTX-480 LUXURY BALL GOWN LONG SLEEVE 3D LACE CATHEDRAL ', 1300, '2.jpg', NULL, NULL),
+(3, 'FREYJA - VLTX-481 BALL GOWN ROYAL CATHEDRAL TRAIN LONG SLEEVE HIGH ', 1200, '3.jpg', NULL, NULL),
+(4, 'ATHENA-VLTX-482 BALL GOWN FLOOR LENGTH WEDDING DRESS', 1529, '4.jpg', NULL, NULL),
+(5, 'VMDC - 395 MERMAID IVORY PRINCESS FLOOR LENGTH V NECK SATIN ', 1430, '5.jpg', NULL, NULL),
+(6, 'VLTX-394 LUXURY BALL GOWN HIGH NECK LONG 3D LACE WEDDING DRESS', 1230, '6.jpg', NULL, NULL),
+(7, 'VMDC-408 MERMAID IVORY MINIMALIST FLOOR LENGTH 3D FLORAL ', 1390, '7.jpg', NULL, NULL),
+(8, 'VLTX - 406 LUXURY BALL GOWN CATHEDRAL TRAIN STRAPLESS', 1690, '8.jpg', NULL, NULL),
+(9, 'VMDC-408 MINIMALIST FLOOR LENGTH WITH LONG CAP 2D FLORAL ', 1403, '9.jpg', NULL, NULL),
+(10, 'SELENA - VLITX-479 LIMITED BALL GOWN IVORY ROYAL CATHEDRAL', 1290, '0.jpg', NULL, NULL),
+(11, 'HERA - VLTX-480 LUXURY BALL GOWN LONG SLEEVE 3D LACE CATHEDRAL ', 1390, '0-1.jpg', NULL, NULL),
+(12, 'FREYJA - VLTX-481 BALL GOWN ROYAL CATHEDRAL TRAIN LONG SLEEVE HIGH ', 1190, '0-2.jpg', NULL, NULL),
+(13, 'ATHENA-VLTX-482 BALL GOWN FLOOR LENGTH WEDDING DRESS', 1490, '6-1.jpg', NULL, NULL),
+(14, 'VMDC - 395 MERMAID IVORY PRINCESS FLOOR LENGTH V NECK SATIN ', 1250, '6-2.jpg', NULL, NULL),
+(15, 'VLTX-394 LUXURY BALL GOWN HIGH NECK LONG 3D LACE WEDDING DRESS', 1550, '9-2.jpg', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -97,6 +99,13 @@ CREATE TABLE `bills_anh_cuois` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `bills_anh_cuois`
+--
+
+INSERT INTO `bills_anh_cuois` (`id`, `user_id`, `note`, `created_at`, `updated_at`) VALUES
+(5, 18, 'không', '2022-04-07 06:41:33', '2022-04-07 06:41:33');
 
 -- --------------------------------------------------------
 
@@ -114,6 +123,14 @@ CREATE TABLE `bills_anh_cuoi_details` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `bills_anh_cuoi_details`
+--
+
+INSERT INTO `bills_anh_cuoi_details` (`id`, `billsanhcuoi_id`, `anhcuoi_id`, `price`, `quantity`, `created_at`, `updated_at`) VALUES
+(9, 5, 1, 789, 2, '2022-04-07 06:41:33', '2022-04-07 06:41:33'),
+(10, 5, 2, 690, 1, '2022-04-07 06:41:33', '2022-04-07 06:41:33');
+
 -- --------------------------------------------------------
 
 --
@@ -127,6 +144,14 @@ CREATE TABLE `bills_ao_cuois` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `bills_ao_cuois`
+--
+
+INSERT INTO `bills_ao_cuois` (`id`, `user_id`, `note`, `created_at`, `updated_at`) VALUES
+(13, 18, 'không', '2022-04-07 06:41:25', '2022-04-07 06:41:25'),
+(16, 2, 'không', '2022-04-08 03:59:14', '2022-04-08 03:59:14');
 
 -- --------------------------------------------------------
 
@@ -144,6 +169,14 @@ CREATE TABLE `bills_ao_cuoi_details` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `bills_ao_cuoi_details`
+--
+
+INSERT INTO `bills_ao_cuoi_details` (`id`, `billsaocuoi_id`, `aocuoi_id`, `price`, `quantity`, `created_at`, `updated_at`) VALUES
+(24, 13, 1, 1100, 2, '2022-04-07 06:41:25', '2022-04-07 06:41:25'),
+(25, 13, 2, 1300, 1, '2022-04-07 06:41:25', '2022-04-07 06:41:25');
+
 -- --------------------------------------------------------
 
 --
@@ -155,7 +188,7 @@ CREATE TABLE `chi_tiet_anh_cuois` (
   `image1` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `image2` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `image3` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `id_anhcuoi` int(11) NOT NULL,
+  `id_anhcuoi` bigint(20) UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -165,12 +198,12 @@ CREATE TABLE `chi_tiet_anh_cuois` (
 --
 
 INSERT INTO `chi_tiet_anh_cuois` (`id`, `image1`, `image2`, `image3`, `id_anhcuoi`, `created_at`, `updated_at`) VALUES
-(1, '/images/AnhCuoi/1.jpg', '/images/AlbumAnhCuoi/1-1.jpg', '/images/AlbumAnhCuoi/1-2.jpg', 1, NULL, NULL),
-(2, '/images/AlbumAnhCuoi/2-1.jpg', '/images/AlbumAnhCuoi/2-2.jpg', '/images/AlbumAnhCuoi/2-3.jpg', 2, NULL, NULL),
-(3, '/images/AnhCuoi/3.jpg', '/images/AlbumAnhCuoi/3-1.jpg', '/images/AlbumAnhCuoi/3-2.jpg', 3, NULL, NULL),
-(4, '/images/AnhCuoi/4.jpg', '/images/AlbumAnhCuoi/4-1.jpg', '/images/AlbumAnhCuoi/4-2.jpg', 4, NULL, NULL),
-(5, '/images/AnhCuoi/5.jpg', '/images/AlbumAnhCuoi/5-1.jpg', '/images/AlbumAnhCuoi/5-2.jpg', 5, NULL, NULL),
-(6, '/images/AlbumAnhCuoi/6-1.jpg', '/images/AlbumAnhCuoi/6-2.jpg', '/images/AlbumAnhCuoi/6-3.jpg', 6, NULL, NULL);
+(1, '1.jpg', '1-1.jpg', '1-2.jpg', 1, NULL, NULL),
+(2, '2-1.jpg', '2-2.jpg', '2-3.jpg', 2, NULL, NULL),
+(3, '3.jpg', '3-1.jpg', '3-2.jpg', 3, NULL, NULL),
+(4, '4.jpg', '4-1.jpg', '4-2.jpg', 4, NULL, NULL),
+(5, '5.jpg', '5-1.jpg', '5-2.jpg', 5, NULL, NULL),
+(6, '6-1.jpg', '6-2.jpg', '6-3.jpg', 6, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -180,10 +213,10 @@ INSERT INTO `chi_tiet_anh_cuois` (`id`, `image1`, `image2`, `image3`, `id_anhcuo
 
 CREATE TABLE `chi_tiet_ao_cuois` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `image1` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image2` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image3` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `id_aocuoi` bigint(11) UNSIGNED NOT NULL,
+  `image1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image2` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image3` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `id_aocuoi` bigint(20) UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -193,15 +226,15 @@ CREATE TABLE `chi_tiet_ao_cuois` (
 --
 
 INSERT INTO `chi_tiet_ao_cuois` (`id`, `image1`, `image2`, `image3`, `id_aocuoi`, `created_at`, `updated_at`) VALUES
-(1, '/images/AoCuoi/1.jpg', '/images/AlbumAoCuoi/1-1.jpg', '/images/AlbumAoCuoi/1-2.jpg', 1, NULL, NULL),
-(2, '/images/AoCuoi/2.jpg', '/images/AlbumAoCuoi/2-1.jpg', '/images/AlbumAoCuoi/2-2.jpg', 2, NULL, NULL),
-(3, '/images/AoCuoi/3.jpg', '/images/AlbumAoCuoi/3-1.jpg', '/images/AlbumAoCuoi/3-2.jpg', 3, NULL, NULL),
-(4, '/images/AoCuoi/4.jpg', '/images/AlbumAoCuoi/4-1.jpg', '/images/AlbumAoCuoi/4-2.jpg', 4, NULL, NULL),
-(5, '/images/AoCuoi/5.jpg', '/images/AlbumAoCuoi/5-1.jpg', '/images/AlbumAoCuoi/5-2.jpg', 5, NULL, NULL),
-(6, '/images/AoCuoi/6.jpg', '/images/AlbumAoCuoi/6-1.jpg', '/images/AlbumAoCuoi/6-2.jpg', 6, NULL, NULL),
-(7, '/images/AoCuoi/7.jpg', '/images/AlbumAoCuoi/7-1.jpg', '/images/AlbumAoCuoi/7-2.jpg', 7, NULL, NULL),
-(8, '/images/AoCuoi/8.jpg', '/images/AlbumAoCuoi/8-1.jpg', '/images/AlbumAoCuoi/8-2.jpg', 8, NULL, NULL),
-(9, '/images/AoCuoi/9.jpg', '/images/AoCuoi/9-1.jpg', '/images/AoCuoi/9-2.jpg', 9, NULL, NULL);
+(1, '1.jpg', '1-1.jpg', '1-2.jpg', 1, NULL, NULL),
+(2, '2.jpg', '2-1.jpg', '2-2.jpg', 2, NULL, NULL),
+(3, '3.jpg', '3-1.jpg', '3-2.jpg', 3, NULL, NULL),
+(4, '4.jpg', '4-1.jpg', '4-2.jpg', 4, NULL, NULL),
+(5, '5.jpg', '5-1.jpg', '5-2.jpg', 5, NULL, NULL),
+(6, '6.jpg', '6-1.jpg', '6-2.jpg', 6, NULL, NULL),
+(7, '7.jpg', '7-1.jpg', '7-2.jpg', 7, NULL, NULL),
+(8, '8.jpg', '8-1.jpg', '8-2.jpg', 8, NULL, NULL),
+(9, '9.jpg', '9-1.jpg', '9-2.jpg', 9, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -288,7 +321,8 @@ CREATE TABLE `personal_access_tokens` (
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `role` int(11) NOT NULL DEFAULT 1,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT 'AvatarUser.png',
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `phone` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `address` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -303,10 +337,12 @@ CREATE TABLE `users` (
 -- Đang đổ dữ liệu cho bảng `users`
 --
 
-INSERT INTO `users` (`id`, `role`, `name`, `email`, `phone`, `address`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 2, 'Nhu Hoang Hai', 'nhuhoanghai1900@gmail.com', '0933037293', 'Viet Nam', NULL, '$2y$10$j5nM9KuQ4oF9KziL0jfHpeCaaVSZjMd4BNiYcnuQ09piKQ4xzF4Xm', NULL, '2022-03-28 11:18:02', '2022-03-28 11:18:02'),
-(2, 1, 'Hoang Hai', 'nhuhoanghai@gmail.com', '0123456789', 'china', NULL, '$2y$10$SojTHc6OkZ1ZaYh5Aw8jMumXgU6JJt8tQ7GoE7m5YDXXcmn91mQ82', 'XqimYRtr91PgWyyDYSvYYFYKjVNlLZRwCKbcWYrmFteB9I2w3YxhYancAT2h', '2022-03-28 11:18:20', '2022-03-28 11:18:20'),
-(18, 1, 'Lê Minh Quang', 'leminhquang@gmail.com', '0933037293', 'Việt Nam', NULL, '$2y$10$TSI9hdonDvpuFG3ACZnVZu5hWpaNUbrStaooPsez4IvxmKdgHo.pS', NULL, NULL, NULL);
+INSERT INTO `users` (`id`, `role`, `image`, `name`, `email`, `phone`, `address`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 2, '003.jpg', 'Nhu Hoang Hai', 'nhuhoanghai1900@gmail.com', '0933037293', 'Viet Nam', NULL, '$2y$10$j5nM9KuQ4oF9KziL0jfHpeCaaVSZjMd4BNiYcnuQ09piKQ4xzF4Xm', NULL, '2022-03-28 11:18:02', '2022-03-28 11:18:02'),
+(2, 1, '0.jpg', 'Hoang Hai', 'nhuhoanghai@gmail.com', '0123456789', 'china', NULL, '$2y$10$SojTHc6OkZ1ZaYh5Aw8jMumXgU6JJt8tQ7GoE7m5YDXXcmn91mQ82', 'bhDgygigQo5Z3AZshSKAMSSO8M1SP0NKRz4ue9AkBh0Gvpqy23esUDJvsize', '2022-03-28 11:18:20', '2022-03-28 11:18:20'),
+(18, 1, 'quang.jpg', 'Lê Minh Quang', 'leminhquang@gmail.com', '0933037293', 'Việt Nam', NULL, '$2y$10$TSI9hdonDvpuFG3ACZnVZu5hWpaNUbrStaooPsez4IvxmKdgHo.pS', NULL, NULL, NULL),
+(19, 1, 'hung.jpg', 'Đặng Ngọc Hùng', 'ngochung@gmail.com', '0933037293', 'Việt Nam', NULL, '$2y$10$sAt0P2skStLiFb2.T3CxAe5kFW1M76EWh5A0aGEFxpwvvqIUHqVze', NULL, '2022-04-08 05:25:05', '2022-04-08 05:25:05'),
+(21, 1, 'nam.jpg', 'Đỗ Phương Nam', 'phuongnam@gmail.com', '0933037293', 'Việt Nam', NULL, '$2y$10$M7l3nB1KQKPJ.I9n7M7A9uj1LOZCRP2iyBUFWHrJu/MMam0/.op9u', NULL, '2022-04-08 07:52:50', '2022-04-08 07:52:50');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -364,7 +400,8 @@ ALTER TABLE `bills_ao_cuoi_details`
 -- Chỉ mục cho bảng `chi_tiet_anh_cuois`
 --
 ALTER TABLE `chi_tiet_anh_cuois`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_anhcuoi` (`id_anhcuoi`);
 
 --
 -- Chỉ mục cho bảng `chi_tiet_ao_cuois`
@@ -416,49 +453,49 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT cho bảng `anhcuois`
 --
 ALTER TABLE `anhcuois`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT cho bảng `aocuois`
 --
 ALTER TABLE `aocuois`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT cho bảng `bills_anh_cuois`
 --
 ALTER TABLE `bills_anh_cuois`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT cho bảng `bills_anh_cuoi_details`
 --
 ALTER TABLE `bills_anh_cuoi_details`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT cho bảng `bills_ao_cuois`
 --
 ALTER TABLE `bills_ao_cuois`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT cho bảng `bills_ao_cuoi_details`
 --
 ALTER TABLE `bills_ao_cuoi_details`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT cho bảng `chi_tiet_anh_cuois`
 --
 ALTER TABLE `chi_tiet_anh_cuois`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT cho bảng `chi_tiet_ao_cuois`
 --
 ALTER TABLE `chi_tiet_ao_cuois`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT cho bảng `failed_jobs`
@@ -482,7 +519,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
@@ -513,6 +550,12 @@ ALTER TABLE `bills_ao_cuois`
 ALTER TABLE `bills_ao_cuoi_details`
   ADD CONSTRAINT `bills_ao_cuoi_details_ibfk_1` FOREIGN KEY (`aocuoi_id`) REFERENCES `aocuois` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `bills_ao_cuoi_details_ibfk_2` FOREIGN KEY (`billsaocuoi_id`) REFERENCES `bills_ao_cuois` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Các ràng buộc cho bảng `chi_tiet_anh_cuois`
+--
+ALTER TABLE `chi_tiet_anh_cuois`
+  ADD CONSTRAINT `chi_tiet_anh_cuois_ibfk_1` FOREIGN KEY (`id_anhcuoi`) REFERENCES `anhcuois` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Các ràng buộc cho bảng `chi_tiet_ao_cuois`
