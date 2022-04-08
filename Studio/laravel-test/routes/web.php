@@ -74,8 +74,12 @@ Route::get('/AdminBillsAnhCuoiDetail/{id}', [AdminBillsAnhCuoi::class, 'showdeta
 Route::get('/AdminBillsAnhCuoiDetailDelete/{id}', [AdminBillsAnhCuoi::class, 'deletedetail'])->name('DeleteBillsAnhCuoiDetail');
 
 //admin add product
+//admin add ao cuoi
 Route::get('/Product', [AddProductController::class, 'index'])->name('ProductAdmin');
 Route::get('/AddAoCuoi', [AddProductController::class, 'AddAoCuoi'])->name('AddAoCuoi');
+Route::post('/AddAoCuoi', [AddProductController::class, 'CreateAoCuoi'])->name('AddAoCuoi');
+
+
 Route::get('/AddAnhCuoi', [AddProductController::class, 'AddAnhCuoi'])->name('AddAnhCuoi');
 
 

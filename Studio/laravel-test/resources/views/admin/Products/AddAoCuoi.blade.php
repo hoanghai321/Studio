@@ -10,38 +10,23 @@
                         <div class="block">
                             <div class="product-list">
                             <h2 style="text-align: center; margin-bottom: 50px;"><strong/>THÊM MỚI ÁO CƯỚI</h2>
-                                <form action="" method="post" class="checkout-form" role="form">
+                                <form action="" method="post" class="checkout-form" role="form" enctype="multipart/form-data">
                                     @csrf
-                                    <div class="checkout-country-code clearfix">
                                         <div class="form-group">
-                                            <label for="">Họ và tên:</label>
+                                            <label for="">Tên ảnh</label>
                                             <input name="name" type="text" class="form-control" required/>
                                         </div>
                                         <div class="form-group">
-                                            <label for="">Email:</label>
-                                            <input name="email" type="email" class="form-control" required/>
+                                            <label for="">Giá:</label>
+                                            <input name="price" type="text" class="form-control" required/>
                                         </div>
-                                    </div>
                                     <div class="form-group">
-                                            <label for="">Mật khẩu:</label>
-                                            <input id="password" name="password" type="password" class="form-control" required/>
+                                            <label for="">Upload ảnh:</label>
+                                            <input name="upload" type="file" class="form-control" required/>
+                                            @error('upload')
+                                                <small class="text-danger help-block">{{ $message }}</small>
+                                            @enderror
                                         </div>
-                                    <div class="checkout-country-code clearfix">
-                                        <div class="form-group">
-                                            <label for="">SĐT:</label>
-                                            <input name="phone" type="tel" class="form-control" required/>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="">Địa chỉ:</label>
-                                            <input name="address" class="form-control" required/>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <select name="role" class="form-control">
-                                            <option value="1">User</option>
-                                            <option value="2">Admin</option>
-                                        </select>
-                                    </div>
                                     <input type="submit" style="background-color: red;" class="btn btn-main pull-right" value="Thêm" />
                                 </form>
                             </div>
